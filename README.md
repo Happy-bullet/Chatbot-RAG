@@ -20,22 +20,22 @@ Arquitetura
 
 Fluxo de dados do upload até a resposta:
 
-graph TD
-    subgraph Setup
-        A[PDF Upload] --> B[Text Extraction]
-        B --> C[Chunking]
-        C --> D[OpenAI Embeddings]
-        D --> E[(FAISS Vector Store)]
-    end
-
-    subgraph Runtime
-        U[User Query] --> F[Query Embedding]
-        F --> G{Semantic Search}
-        E --> G
-        G -->|Top k Chunks| H[Context + Query]
-        H --> I[LLM Generation]
-        I --> J[Response]
-    end
+    graph TD
+        subgraph Setup
+            A[PDF Upload] --> B[Text Extraction]
+            B --> C[Chunking]
+            C --> D[OpenAI Embeddings]
+            D --> E[(FAISS Vector Store)]
+        end
+    
+        subgraph Runtime
+            U[User Query] --> F[Query Embedding]
+            F --> G{Semantic Search}
+            E --> G
+            G -->|Top k Chunks| H[Context + Query]
+            H --> I[LLM Generation]
+            I --> J[Response]
+        end
 
 
 Setup
@@ -44,9 +44,9 @@ Clone o repo.
 
 Instale as libs:
 
-pip install streamlit langchain langchain-openai faiss-cpu pypdf tiktoken
+    pip install streamlit langchain langchain-openai faiss-cpu pypdf tiktoken
 
 
 Rode a aplicação:
 
-streamlit run app.py
+    streamlit run app.py
