@@ -47,8 +47,8 @@ Clone o repositório:
 
 Bash
 
-git clone [https://github.com/SEU_USUARIO/Chatbot-RAG-Final.git](https://github.com/SEU_USUARIO/Chatbot-RAG-Final.git)
-cd Chatbot-RAG-Final
+git clone [https://github.com/SEU_USUARIO/Chatbot-RAG-Final.git](https://github.com/SEU_USUARIO/Chatbot-RAG.git)
+cd Chatbot-RAG
 Crie um ambiente virtual (Opcional, mas recomendado):
 
 Bash
